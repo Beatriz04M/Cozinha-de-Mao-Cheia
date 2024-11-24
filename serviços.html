@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Cozinha de Mão Cheia</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<!-- Header -->
+<header >
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="Imagens/Logo_1.png" alt="Logo" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação" onclick="escondeContainer()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav justify-content-center nav-underline align-items-center fs-5 flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="serviços.html">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reservas.html">Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactos.html">Contactos</a>
+                    </li>
+                </ul>
+                <!-- Opção de Idioma -->
+                <ul class="navbar-nav nav-underline ms-auto d-flex align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link-i active" aria-current="page" href="index.html">pt |</a>
+                        <a class="nav-link-i" href="index.html">en</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="background-image">
+        <img src="Imagens/evento7_1.jpg" alt="Imagem Fundo">
+    </div>
+
+<div class="container">
+    <h1>Serviços</h1>
+    <p>Cozinha de Mão Cheia</p>
+ </div>
+</header>
+
+<!--(apresentação e explicação dos serviços apresentados na página Home)-->
+
+<!-- Footer -->
+<footer class="footer-container">
+    <div class="footer text-white py-4 mx-5">
+        <div class="row justify-content-between align-items-start g-3">
+            <!-- Coluna 1: Contactos -->
+            <div class="col-md-5 ms-md-3"> 
+                <h5 class="fw-bold">Contactos</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i>961 062 031</li>
+                    <li class="mb-2">
+                        <a href="mailto:cozinhademaocheia.restaurante@gmail.com" class="nav-link p-0">
+                            <i class="bi bi-envelope-fill me-2"></i>cozinhademaocheia.restaurante@gmail.com
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="https://maps.app.goo.gl/gtkJ1nGs2ieNvJpq6" class="nav-link p-0">
+                            <i class="bi bi-geo-alt me-2"></i>Travessa Rua da Barqueira Nº 33 R/c, Coimbra 3045-459
+                        </a>
+                    </li>                
+                </ul>
+                <div class="mt-3">
+                    <strong>Segunda a Sábado:</strong><br>
+                    das 9h às 20h30
+                </div>
+            </div>
+
+            <!-- Coluna 2: Redes Sociais -->
+            <div class="col-md-5 me-md-3"> 
+                <h5 class="fw-bold">Redes Sociais</h5>
+                <ul class="list-unstyled d-flex">
+                    <li class="me-4">
+                        <a href="https://facebook.com/Cozinha-de-Mão-Cheia" style="color: white;" target="_blank">
+                            <i class="bi bi-facebook fs-3"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/cozinhademaocheia.restaurante" style="color: white;" target="_blank">
+                            <i class="bi bi-instagram fs-3"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Rodapé -->
+        <div class="text-center mt-4">
+            <small>© 2024 Cozinha de Mão Cheia. Todos os direitos reservados.</small>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const navbarToggle = document.querySelector('.navbar-toggler');
+    const container = document.querySelector('.container');
+
+    function escondeContainer(){
+        container.classList.toggle('hidden');
+    }
+</script>
+
+</body>
+</html>
