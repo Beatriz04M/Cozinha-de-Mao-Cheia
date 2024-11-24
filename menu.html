@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Cozinha de Mão Cheia</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+     <!-- Header -->
+     <header >
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="Imagens/Logo_1.png" alt="Logo" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação" onclick="escondeContainer()">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav justify-content-center nav-underline align-items-center fs-5 flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="serviços.html">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reservas.html">Reservas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactos.html">Contactos</a>
+                        </li>
+                    </ul>
+                    <!-- Opção de Idioma -->
+                    <ul class="navbar-nav nav-underline ms-auto d-flex align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link-i active" aria-current="page" href="index.html">pt |</a>
+                            <a class="nav-link-i" href="index.html">en</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="background-image">
+            <img src="Imagens/Fundo10_1.jpg" alt="Imagem Fundo">
+        </div>
+
+    <div class="container">
+        <h1>Menu</h1>
+        <p>Cozinha de Mão Cheia</p>
+     </div>
+   </header>
+
+<!-- Menu Semanal -->
+<div class="Menu-container my-5">
+    <h2 class="text-center" style="font-size: 2rem; margin-bottom: 20px; color: black;">Menu Semanal - 18 a 23 de Novembro</h2>
+    <div class="row" style="max-width: 90%; margin: auto;">
+        <!-- Coluna 1: Menu -->
+        <div class="col-md-6">
+            <div class="row">
+                <!-- Segunda-feira -->
+                <div id="menu-day" class="menu-item col-6">
+                    <h5>Segunda-feira 18/11/2024</h5>
+                    <p>Sopa: Caldo Verde <br> Peixe: Salmão Grelhado <br> Carne: Fêveras com Cogumelos e Natas</p>
+                    <small>11€</small>
+                </div>
+
+                <!-- Terça-feira -->
+                <div id="menu-day" class="menu-item col-6">
+                    <h5>Terça-feira 19/11/2024</h5>
+                    <p>Sopa: Creme de Legumes <br> Peixe: Pescada Frita com Arroz de Tomate <br> Carne: Piascas de Vitela na Grelha</p>
+                    <small>11€</small>
+                </div>
+
+                <!-- Quarta-feira -->
+                <div id="menu-day" class="menu-item col-6">
+                    <h5>Quarta-feira 20/11/2024</h5>
+                    <p>Sopa: Couve Portuguesa <br> Peixe: Bacalhau à Minhota <br> Carne: Arroz de Carne</p>
+                    <small>11€</small>
+                </div>
+
+                <!-- Quinta-feira -->
+                <div id="menu-day" class="menu-item col-6">
+                    <h5>Quinta-feira 21/11/2024</h5>
+                    <p>Sopa: Agrião <br> Peixe: Potas Recheadas <br> Carne: Grelhada Mista</p>
+                    <small>11€</small>
+                </div>
+
+                <!-- Sexta-feira -->
+                <div id="menu-day" class="menu-item col-6">
+                    <h5>Sexta-feira 22/11/2024</h5>
+                    <p>Sopa: Feijão Verde <br> Peixe: Dourada Escalada <br> Carne: Sopa da Pedra</p>
+                    <small>11€</small>
+                </div>
+
+                <!-- Sábado -->
+                <div id="menu-day" class="menu-item col-6">
+                    <h5>Sábado 23/11/2024</h5>
+                    <p><br>Pratos à Lista</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coluna 2: Carrossel de Imagens -->
+        <div class="col-md-6">
+            <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Item 1 -->
+                    <div class="carousel-item active">
+                        <img src="Imagens/Menu_1.JPG" class="d-block w-100" alt="Imagem 1">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="carousel-item">
+                        <img src="Imagens/Menu_2.jpg" class="d-block w-100" alt="Imagem 2">
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="carousel-item">
+                        <img src="Imagens/Menu_3.JPG" class="d-block w-100" alt="Imagem 3">
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="carousel-item">
+                        <img src="Imagens/Menu_4.JPG" class="d-block w-100" alt="Imagem 4">
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="carousel-item">
+                        <img src="Imagens/Menu_5.JPG" class="d-block w-100" alt="Imagem 5">
+                    </div>
+                    <!-- Item 6 -->
+                    <div class="carousel-item">
+                        <img src="Imagens/Menu_6.JPG" class="d-block w-100" alt="Imagem 6">
+                    </div>
+                </div>
+                <!-- Setas de slide -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Menu Geral -->
+<h2 class="text-center" style="margin-top: 80px; color: black;">Menu Geral</h2>
+<div class="menu-geral" style="margin-left: 40px; margin-right: 40px;">
+  <!-- Entradas / Outros -->
+  <div class="menu-item">
+      <h4>Entradas / Outros</h4>
+      <ul>
+          <li>Cesto de Pão e Broa <span class="preco">1,20€</span></li>
+          <li>Azeitonas <span class="preco">1,50€</span></li>
+          <li>Manteiga Individual <span class="preco">1,00€</span></li>
+          <li>Patê Individual <span class="preco">1,00€</span></li>
+          <li>Queijo Curado com Compota <span class="preco">4,50€</span></li>
+          <li>Queijo Curado Simples <span class="preco">3,00€</span></li>
+          <li>Sopa <span class="preco">2,00€</span></li>
+          <li>Legumes Cozidos <span class="preco">3,00€</span></li>
+          <li>Salada <span class="preco">2,00€</span></li>
+          <li>Dose de Batata Frita <span class="preco">3,00€</span></li>
+          <li>Dose de Arroz <span class="preco">3,00€</span></li>
+      </ul>
+  </div>
+
+   <!-- Pratos de Carne -->
+    <div class="menu-item">
+        <h4>Pratos de Carne</h4>
+        <ul>
+            <li>Alheira <span class="preco">9,50€</span></li>
+            <li>Bife de Peru Recheado <span class="preco">10,00€</span></li>
+            <li>Bife de Vitela (molho cervejeira, mostarda e pimenta rosa) <span class="preco">12,50€</span></li>
+            <li>Bitoque de Porco <span class="preco">9,50€</span></li>
+            <li>Costeleta de Novilho <span class="preco">15,00€</span></li>
+            <li>Francesinha <span class="preco">12,50€</span></li>
+            <li>Entremeada <span class="preco">9,50€</span></li>
+            <li>Plumas de Porco <span class="preco">10,00€</span></li>
+            <li>Secretos de Porco <span class="preco">10,50€</span></li>
+            <li>Picanha <span class="preco">12,50€</span></li>
+        </ul>
+    </div>
+
+  <!-- Pratos de Peixe -->
+  <div class="menu-item">
+        <h4>Pratos de Peixe</h4>
+        <ul>
+            <li>Bacalhau à "Mão Cheia" (para 2 pessoas) <span class="preco">22,50€</span></li>
+            <li>Bacalhau à Brás <span class="preco">11,00€</span></li>
+            <li>Dourada Grelhada <span class="preco">10,00€</span></li>
+            <li>Robalo Grelhado <span class="preco">10,00€</span></li>
+            <li>Perca Grelhada <span class="preco">10,00€</span></li>
+            <li>Filetes de Pescada <span class="preco">9,50€</span></li>
+            <li>Salmão Grelhado <span class="preco">11,00€</span></li>
+            <li>Tentáculos de Pota <span class="preco">10,00€</span></li>
+            <li>Polvo <span class="preco">15,00€</span></li>
+            <li>Chocos <span class="preco">12,00€</span></li>
+            <p><small>Nenhum prato, produto alimentar ou bebida, incluindo o couvert, pode ser cobrado se não for solicitado pelo cliente ou por este for inutilizado.</small></p>
+            <p><small>(Artº 185º do Decreto Lei nº10/2015, de 16 de Janeiro)</small></p>
+            <p><small>Todos os produtos incluem IVA à taxa legal em vigor</small></p>
+        </ul>
+    </div>
+
+   <!-- Sobremesas -->
+   <div class="menu-item">
+        <h4>Sobremesas</h4>
+        <ul>
+            <li>Arroz Doce <span class="preco">2,20€</span></li>
+            <li>Bavaroise de Laranja <span class="preco">2,20€</span></li>
+            <li>Bolo de Bolacha <span class="preco">2,50€</span></li>
+            <li>Bolo Frio de Framboesas <span class="preco">2,80€</span></li>
+            <li>Bolo Pudim <span class="preco">2,20€</span></li>
+            <li>Cheesecake <span class="preco">2,50€</span></li>
+            <li>Fatia de Gelado <span class="preco">1,50€</span></li>
+            <li>Leite Creme <span class="preco">2,20€</span></li>
+            <li>Tarte de Limão Merengada <span class="preco">2,50€</span></li>
+            <li>Tarte Fresca de Frutos Vermelhos <span class="preco">2,50€</span></li>
+            <li>Tarte Holandesa <span class="preco">3,00€</span></li>
+            <li>Molotofe <span class="preco">1,80€</span></li>
+            <li>Mousse <span class="preco">1,80€</span></li>
+            <li>Natas do Céu <span class="preco">2,50€</span></li>
+            <li>Panacota com Molho de Frutos Vermelhos<span class="preco">2,50€</span></li>
+            <li>Peça de Fruta <span class="preco">1,50€</span></li>
+            <li>Pudim Caseiro<span class="preco">2,00€</span></li>
+            <li>Pudim de Laranja <span class="preco">2,00€</span></li>
+            <li>Pudim de Côco<span class="preco">2,00€</span></li>
+            <li>Pudim de Ananás<span class="preco">2,20€</span></li>
+            <li>Pudim Flan Caseiro<span class="preco">2,20€</span></li>
+            <li>Salada de Frutas<span class="preco">2,00€</span></li>
+            <li>Tarte de Amêndoa<span class="preco">2,50€</span></li>
+            <li>Torta de Laranja<span class="preco">2,20€</span></li>
+            <li>>Tarte de Laranja <span class="preco">2,50€</span></li>
+            <p><small>As sobremesas são confecionadas diariamente, pelo que, não estarão todas disponíveis.</small></p>
+        </ul>
+    </div>
+
+ <!-- Águas / Refrigerantes -->
+ <div class="menu-item">
+    <h4>Águas / Refrigerantes</h4>
+    <ul>
+        <li>Água Mineral 0,5L <span class="preco">1,00€</span></li>
+        <li>Água Mineral 1,5L <span class="preco">1,50€</span></li>
+        <li>Água com Gás <span class="preco">1,00€</span></li>
+        <li>Água com Gás com Sabores <span class="preco">1,70€</span></li>
+        <li>Refrigerantes 0,33cl <span class="preco">1,70€</span></li>
+        <li>Refrigerantes 0,35cl <span class="preco">2,00€</span></li>
+        <li>Néctares <span class="preco">1,70€</span></li>
+        <li>Sumo de Fruta Natural <span class="preco">2,50€</span></li>
+        <li>Água Tónica <span class="preco">1,70€</span></li>
+    </ul>
+ </div>
+      <!-- Cervejas / Vinhos -->
+ <div class="menu-item">
+    <h4>Cervejas / Vinhos</h4>
+    <ul>
+        <li>Fino / Mini 0,20cl <span class="preco">1,20€</span></li>
+        <li>Cerveja 0,33cl <span class="preco">1,60€</span></li>
+        <li>Cerveja Sem Álcool 0,25cl <span class="preco">1,30€</span></li>
+        <li>Cerveja Sem Álcool 0,33cl <span class="preco">1,70€</span></li>
+        <li>Caneca 0,40cl <span class="preco">2,00€</span></li>
+        <li>Decanter Vinho da Casa Tinto / Branco 0,5L <span class="preco">2,50€</span></li>
+        <li>Vinho a Copo <span class="preco">1,60€</span></li>
+        <li>Vinho Tinto / Branco Regional <span class="preco">7,50€</span></li>
+        <li>Vinho Tinto / Branco Colheita Selecionada <span class="preco">12,50€</span></li>
+        <li>Vinho Tinto / Branco Doc <span class="preco">20,00€</span></li>
+        <li>Espumante <span class="preco">25,00€</span></li>
+    </ul>
+ </div>
+</div>
+    
+<!-- Footer -->
+<footer class="footer-container">
+    <div class="footer text-white py-4 mx-5">
+        <div class="row justify-content-between align-items-start g-3">
+            <!-- Coluna 1: Contactos -->
+            <div class="col-md-5 ms-md-3"> 
+                <h5 class="fw-bold">Contactos</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i>961 062 031</li>
+                    <li class="mb-2">
+                        <a href="mailto:cozinhademaocheia.restaurante@gmail.com" class="nav-link p-0">
+                            <i class="bi bi-envelope-fill me-2"></i>cozinhademaocheia.restaurante@gmail.com
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="https://maps.app.goo.gl/gtkJ1nGs2ieNvJpq6" class="nav-link p-0">
+                            <i class="bi bi-geo-alt me-2"></i>Travessa Rua da Barqueira Nº 33 R/c, Coimbra 3045-459
+                        </a>
+                    </li>                
+                </ul>
+                <div class="mt-3">
+                    <strong>Segunda a Sábado:</strong><br>
+                    das 9h às 20h30
+                </div>
+            </div>
+
+            <!-- Coluna 2: Redes Sociais -->
+            <div class="col-md-5 me-md-3">
+                <h5 class="fw-bold">Redes Sociais</h5>
+                <ul class="list-unstyled d-flex">
+                    <li class="me-4">
+                        <a href="https://facebook.com/Cozinha-de-Mão-Cheia" style="color: white;" target="_blank">
+                            <i class="bi bi-facebook fs-3"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/cozinhademaocheia.restaurante" style="color: white;" target="_blank">
+                            <i class="bi bi-instagram fs-3"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Rodapé -->
+        <div class="text-center mt-4">
+            <small>© 2024 Cozinha de Mão Cheia. Todos os direitos reservados.</small>
+        </div>
+    </div>
+</footer>
+        
+        <script>
+            const navbarToggle = document.querySelector('.navbar-toggler');
+            const container = document.querySelector('.container');
+
+            function escondeContainer(){
+                container.classList.toggle('hidden');
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js" ></script>
+</body>
+</html>
