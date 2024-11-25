@@ -1,0 +1,611 @@
+/* Header */
+header {
+    color: white;
+    position: relative; 
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.background-image img {
+    width: 100%;
+    height: 412px;
+    filter: blur(5px); 
+    object-fit: cover; 
+}
+
+header p{
+    color: white;
+    font-size: 1.5rem;
+}
+
+header h1{
+    color: white;
+    font-size: 2.5rem;
+}
+
+/* Navbar */
+.navbar {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: #7f7f7f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar-brand img {
+    height: 60px;
+}
+
+.navbar .nav-link {
+    color: white; 
+    text-decoration: none;
+    font-size: 1.25rem;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.navbar-nav .nav-link-i {
+    color: white;
+    font-size: 16px;
+}
+
+.navbar-nav.ms-auto {
+    margin-right: 20px; 
+}
+
+.navbar .nav-link.active {
+    color: white !important; 
+    font-weight: bold;
+}
+
+.navbar-nav.ms-auto {
+    margin-left: auto;
+    display: flex; 
+    align-items: center; 
+}
+
+/* Container de conteúdo*/
+.container {
+    position: absolute; 
+    top: 55%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white; 
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9); 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%; 
+    max-width: 600px; 
+}
+
+.container h1{
+    font-size: 3rem;
+}
+
+.container p{
+    font-size: 1.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Body */
+body {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Secções */
+#Menu, #Serviços, #Contactos {
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Títulos das secções */
+#Menu, #Serviços, #Contactos, #Reservas h2 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 30px; 
+    margin-top: 30px;
+}
+
+/* Textos das secções */
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: black;
+    margin-bottom: 10px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #07396e;
+    text-decoration: underline;
+}
+
+/* Carrossel */
+.carousel-inner {
+    width: 100%; 
+    max-width: 1200px; 
+    height: 500px; 
+    margin: auto; 
+    margin-top: 20px;
+    border-radius: 1.5%;
+  }
+  
+  .carousel-item img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+  }  
+
+/*Footer*/
+.footer-container {
+    background-color: #7f7f7f;
+}
+
+#Footer h5{
+    font-weight: bold;
+}
+
+/* Popup */
+.popup-overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-overlay.active {
+    display: flex; 
+}
+
+.popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    position: relative;
+}
+
+.popup h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.popup label {
+    font-size: 0.9rem;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.popup input, .popup select, .popup textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.popup textarea {
+    resize: none;
+}
+
+/* Botão de cancelar */
+.cancel-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cancel-btn:hover {
+    background-color: red;
+}
+
+/* Botão de reservas */
+.center-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+    margin-bottom: 60px; 
+}
+
+#Reservar button:hover{
+    background-color: #0d5c8c;
+}
+
+/* Botão de Reservar */
+.btn-reserve {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-reserve:hover {
+    background-color: #45a049;
+}
+
+/* Secção Menu */
+#Menu {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#Menu .card {
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color:#264d84;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card p {
+    margin: 5px 0;
+    text-align: left; 
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+#Menu button:hover {
+    background-color: #07396e;
+    color: white;
+}
+
+.menu-img {
+    width: 150px; 
+    height: auto; 
+    border-radius: 8px; 
+    margin-left: 10px; 
+}
+
+.menu-text {
+    flex-grow: 1; 
+    margin-left: 20px;
+}
+
+/* Secção Serviços */
+#Serviços button:hover {
+    background-color: #07396e;
+    color: white;
+}
+
+#Serviços .card{
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#Serviços .card:hover{
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+}
+
+/* Secção Contactos */
+.endereco {
+    flex: 1 1 40%;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.endereco h3 {
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Página de Menu */
+#menu-day p, #menu-day small {
+    margin-bottom: 3px;
+}
+
+.Menu-container h5{
+    font-size: 1.5rem;
+    color: black;
+}
+
+.Menu-container p{
+    font-size: 1.2rem;
+    color: black;
+}
+
+.carousel-inner{
+    margin-top: 13%;
+}
+
+.menu-item {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.menu-item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.menu-item ul {
+    list-style-type: none;
+    padding-left: 0;
+    color: black;
+}
+
+.menu-item li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.preco {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.menu-item ul p {
+    font-style: italic;
+    font-size: 1rem;
+    margin-top: 5px;
+    color: black;
+}
+
+/* Página de contactos */
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem;
+    margin-top: 90px;
+  }
+  
+  .contact-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .contact-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: black;
+  }
+  
+  .contact-card p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-card a:hover {
+    text-decoration: underline;
+  }
+  
+  .fas, .fab {
+    margin-right: 0.5rem;
+    color: #4caf50;
+  }
+
+  .map-container {
+    width: 80%; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .map-container iframe {
+    width: 100%;
+    height: 400px; 
+    border-radius: 10px;
+    border: none;
+  }
+
+.feedback-section {
+    background: linear-gradient(135deg, #ffffff, #f7f7f7);
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.feedback-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feedback-btn {
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.feedback-btn:hover {
+    background-color: #07396e;
+    color:white;
+}
+
+.text-muted {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar-brand img {
+        max-width: 120px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+    }
+
+    /* Container */
+    .container {
+        width: 90%; 
+        padding: 15px; 
+        font-size: 1rem;
+        top: 55%; 
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Body */
+    .menu-text p {
+        font-size: 0.9rem;
+    }
+
+    #Menu, #Serviços, #Contactos {
+        padding: 20px;
+    }
+
+    .carousel-inner {
+        max-height: 300px; 
+    }
+
+    .carousel-item img {
+        object-fit: contain; 
+    }
+
+    /* Footer */
+    .footer .row {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .footer .col-md-5 {
+        margin-bottom: 30px; 
+    }
+
+    .footer .d-flex {
+        justify-content: flex-start; 
+    }
+
+    .footer .d-flex li {
+        margin-right: 15px; 
+        margin-bottom: 5px; 
+    }
+}
+
+@media (max-width: 480px) {
+    /* Navbar */
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+    
+    .container {
+        width: 95%; 
+        padding: 10px; 
+        font-size: 0.9rem; 
+        top: 60%;  
+    }
+
+    /* Body */
+    .menu-img {
+        display: none; 
+    }
+
+    .carousel-inner {
+        max-height: 200px; 
+    }
+
+    #Menu, #Serviços, #Contactos {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    #Menu .card, #Serviços .card {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
