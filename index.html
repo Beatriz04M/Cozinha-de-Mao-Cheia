@@ -14,7 +14,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
-                    <img src="imagens/Logo_1.png" alt="Logo" class="d-inline-block align-text-top">
+                    <img src="Imagens/Logo_1.png" alt="Logo" class="d-inline-block align-text-top">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação" onclick="escondeContainer()">
                     <span class="navbar-toggler-icon"></span>
@@ -47,36 +47,37 @@
                 </div>
             </div>
         </nav>
-        <div class="background-image">
+        <div class="background-image" style="position: relative;">
             <img src="imagens/Fundo14_1.jpg" alt="Imagem Fundo">
+            <div class="content">
+                <h1>Cozinha de Mão Cheia</h1>
+                <p>A qualidade é a nossa marca</p>
+            </div>
         </div>
-
-    <div class="container">
-        <h1>Cozinha de Mão Cheia</h1>
-        <p>A qualidade é a nossa marca</p>
-     </div>
+    
    </header>
 
    <!--Conteúdo-->
    <div id="Menu">
-    <h2 class="text-center">Menu da Semana</h2>
-    <p class="text-center" style="margin-bottom: 0px;">Confira os pratos especiais para cada dia da semana!</p>
+    <h2 class="text-center">Menu do dia</h2>
+    <p class="text-center" style="margin-bottom: 0px;">Confira os pratos especiais que temos hoje para si!</p>
     <br>
-    <div class="row justify-content-center">
-        <!-- Segunda-feira -->
-        <div class="col-md-4 mb-3">
-            <div class="card">
-                <div class="card-header text-center">Segunda-feira</div>
-                <div class="card-body d-flex align-items-center">
-                    <div class="menu-text mx-4">
-                        <p><strong>Sopa:</strong> Caldo Verde</p>
-                        <p><strong>Peixe:</strong> Salmão Grelhado</p>
-                        <p><strong>Carne:</strong> Fêveras com Cogumelos e Natas</p>
-                    </div>
-                    <img src="imagens/Peixe2.jpg" alt="Bacalhau" class="menu-img ms-auto mx-4">
-                </div>
-            </div>
-        </div>
+     <!--TABELA COM DADOS DINAMICOS 1-->
+     <table class="table" id="tabela-1">
+        <thead>
+            <th>Dia da Semana</th>
+            <th>Sopa</th>
+            <th>Peixe</th>
+            <th>Carne</th>
+        </thead>
+        <tbody id="tbody-1">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
     </div>
 
     <div id="Serviços" class="py-5">
@@ -179,12 +180,13 @@
           </div>
           <br>
         <p class="text-center mb-4">Reserve já a sua mesa de forma rápida e fácil!</p>
+        <!-- fazer um formulário-->
         <div class="center-button" id="Reservar">
             <button class="btn btn-outline-dark" onclick="openPopup()">Reservar</button>
         </div>
     
-        <!-- Popup Overlay -->
-        <div class="popup-overlay" id="popupOverlay">
+        <!-- Fazer modal do bootstrap -->
+        <div class="popup-overlay" id="popupOverlay"> 
             <div class="popup">
                 <h2>Reserva - Cozinha de Mão Cheia</h2>
                 <form id="reservationForm">
@@ -209,18 +211,6 @@
             </div>
         </div>
     </div>
-
-    <div id="Contactos">
-        <h2 class="text-center">Contactos</h2>
-        <div>
-            <!-- Informação de endereço -->
-            <div class="endereco">
-                <p><strong>Endereço:</strong><a href="https://maps.app.goo.gl/gtkJ1nGs2ieNvJpq6" target="_blank"> Tv. R. Barqueira 33, 3045-459 Taveiro, Coimbra, Portugal</a></p>
-                <p><strong>Horário:</strong> Segunda a Sábado, 9h - 20h30</p>
-                <h3>Visite-nos!</h3>
-            </div>
-        </div>
-    </div>    
     
   <!-- Footer -->
 <footer class="footer-container">

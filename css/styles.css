@@ -1,11 +1,4 @@
 /* Header */
-header {
-    color: white;
-    position: relative; 
-    width: 100%;
-    margin-bottom: 20px;
-}
-
 header img {
     width: 100%;
     height: 100%;
@@ -70,26 +63,21 @@ header h1{
     align-items: center; 
 }
 
-/* Container de conteúdo*/
-.container {
-    position: absolute; 
-    top: 55%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    color: white; 
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9); 
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 80%; 
-    max-width: 600px; 
+.content {
+    position: absolute;
+    top: 50%; /* Ajusta verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Corrige o deslocamento */
+    color: white; /* Contraste com o fundo */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+    text-align: center; /* Centralização do texto */
 }
 
-.container h1{
+.content h1{
     font-size: 3rem;
 }
 
-.container p{
+.content p{
     font-size: 1.5rem;
 }
 
