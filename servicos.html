@@ -13,7 +13,7 @@
 <header >
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.php">
                 <img src="imagens/Logo_1.png" alt="Logo" class="d-inline-block align-text-top">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação" onclick="escondeContainer()">
@@ -22,42 +22,120 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav justify-content-center nav-underline align-items-center fs-5 flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="menu.html">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="serviços.html">Serviços</a>
+                        <a class="nav-link active" href="servicos.html">Serviços</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="reservas.html">Reservas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contactos.html">Contactos</a>
+                        <a class="nav-link" href="contactos.php">Contactos</a>
                     </li>
                 </ul>
                 <!-- Opção de Idioma -->
                 <ul class="navbar-nav nav-underline ms-auto d-flex align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link-i active" aria-current="page" href="index.html">pt |</a>
-                        <a class="nav-link-i" href="index.html">en</a>
+                        <a class="nav-link-i active" aria-current="page" href="index.php">pt |</a>
+                        <a class="nav-link-i" href="index.php">en</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="background-image">
-        <img src="imagens/evento7_1.jpg" alt="Imagem Fundo">
+    <div class="background-image" style="position: relative;">
+        <img src="imagens/Fundo7_1.jpg" alt="Imagem Fundo">
+        <div class="content">
+            <h1>Serviços</h1>
+            <p>Cozinha de Mão Cheia</p>
+        </div>
     </div>
-
-<div class="container">
-    <h1>Serviços</h1>
-    <p>Cozinha de Mão Cheia</p>
- </div>
 </header>
 
-<!--(apresentação e explicação dos serviços apresentados na página Home)-->
+<!-- Serviços Detalhados -->
+<!-- Seção de Take-Away -->
+<section id="takeAway" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Take-Away</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="imagens/Take-away_1.jpg" alt="Take-Away" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <p>Leve para casa os seus pratos favoritos com a qualidade que nos caracteriza. O nosso serviço de take-away oferece a conveniência de saborear a nossa deliciosa comida no conforto da sua casa. Trabalhamos com embalagens seguras e eficientes, garantindo que a qualidade do prato chega intacta e saborosa.</p>
+                <p><strong>Como funciona:</strong> Faça o seu pedido através do nosso site ou por telefone, escolha o prato que deseja e faça a recolha no horário combinado.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seção de Casamentos -->
+<section id="casamentos" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Casamentos</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="imagens/evento5.jpg" alt="Casamentos" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <p>Planeie o dia mais especial da sua vida connosco, com menus personalizados e um ambiente acolhedor. Trabalhamos de perto com os noivos para garantir que o menu e o serviço estejam de acordo com as suas preferências e as suas expectativas. Desde o início até ao fim, estaremos ao seu lado para tornar este dia perfeito.</p>
+                <p><strong>O que oferecemos:</strong> Menu personalizado, decoração do espaço, coordenação do evento, atendimento de alta qualidade.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seção de Aniversários -->
+<section id="aniversarios" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Aniversários</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="imagens/aniversario1.jpg" alt="Aniversários" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <p>Celebre o seu aniversário com estilo, comida deliciosa e um ambiente perfeito. Oferecemos um serviço completo para tornar o seu aniversário inesquecível, com menus adaptados ao seu gosto e ao tema do evento. Se você deseja algo simples ou mais elaborado, temos a solução ideal.</p>
+                <p><strong>Como funciona:</strong> Defina o menu, escolha o local e deixe-nos cuidar do resto. Organize uma festa maravilhosa com a ajuda de nossa equipe.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seção de Batizados -->
+<section id="batizados" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Batizados</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="imagens/batizado.jpg" alt="Batizados" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <p>Torne o batizado do seu filho num momento inesquecível com o nosso serviço exclusivo. Oferecemos uma experiência única para tornar esse dia especial, com menus delicados e personalizados, com atenção especial aos mais pequenos.</p>
+                <p><strong>O que inclui:</strong> Menu para crianças e adultos, decoração temática, serviço dedicado.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seção de Eventos Personalizados -->
+<section id="eventosPersonalizados" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Eventos Personalizados</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="imagens/eventop_2.jpg" alt="Eventos Personalizados" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <p>Organizamos eventos corporativos, reuniões familiares, celebrações de qualquer natureza e muito mais. Tudo pode ser personalizado de acordo com o seu gosto, e garantimos que a sua experiência seja impecável do início ao fim.</p>
+                <p><strong>O que oferecemos:</strong> Cardápios exclusivos, decoração personalizada, atendimento especializado para qualquer tipo de evento.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Footer -->
 <footer class="footer-container">
@@ -109,17 +187,6 @@
         </div>
     </div>
 </footer>
-
-<script>
-    const navbarToggle = document.querySelector('.navbar-toggler');
-    const container = document.querySelector('.container');
-
-    function escondeContainer(){
-        container.classList.toggle('hidden');
-    }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 <script src="js/bootstrap.bundle.min.js" ></script>
 </body>
 </html>

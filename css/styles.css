@@ -101,7 +101,8 @@ body {
 }
 
 /* Títulos das secções */
-#Menu, #Serviços, #Contactos, #Reservas h2 {
+
+h2 {
     font-size: 2rem;
     color: black;
     margin-bottom: 30px; 
@@ -151,102 +152,12 @@ a:hover {
     font-weight: bold;
 }
 
-/* Popup */
-.popup-overlay {
-    display: none; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.popup-overlay.active {
-    display: flex; 
-}
-
-.popup {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 400px;
-    text-align: left;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
-    position: relative;
-}
-
-.popup h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.popup label {
-    font-size: 0.9rem;
-    color: #555;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.popup input, .popup select, .popup textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px; 
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 0.9rem;
-}
-
-.popup textarea {
-    resize: none;
-}
-
-/* Botão de cancelar */
-.cancel-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.cancel-btn:hover {
-    background-color: red;
-}
-
 /* Botão de reservas */
 .center-button {
     display: flex;
     justify-content: center;
     margin-top: 20px; 
     margin-bottom: 60px; 
-}
-
-#Reservar button:hover{
-    background-color: #0d5c8c;
-}
-
-/* Botão de Reservar */
-.btn-reserve {
-    width: 100%;
-    padding: 10px;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.btn-reserve:hover {
-    background-color: #45a049;
 }
 
 /* Secção Menu */
@@ -341,62 +252,17 @@ a:hover {
     color: black;
 }
 
-/* Página de Menu */
-#menu-day p, #menu-day small {
-    margin-bottom: 3px;
+.accordion-body .preco {
+    float: right;
 }
 
-.Menu-container h5{
-    font-size: 1.5rem;
-    color: black;
+.accordion-button:not(.collapsed) {
+    background-color: transparent; /* Remove a cor de fundo */
 }
 
-.Menu-container p{
-    font-size: 1.2rem;
-    color: black;
-}
-
-.carousel-inner{
-    margin-top: 13%;
-}
-
-.menu-item {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-.menu-item h4 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: black;
-}
-
-.menu-item ul {
-    list-style-type: none;
-    padding-left: 0;
-    color: black;
-}
-
-.menu-item li {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px solid #ddd;
-    font-size: 1.2rem;
-    color: black;
-}
-
-.preco {
-    font-size: 1.2rem;
-    color: black;
-}
-
-.menu-item ul p {
-    font-style: italic;
-    font-size: 1rem;
-    margin-top: 5px;
-    color: black;
+.accordion-button {
+    font-size: 1,5rem;
+    color: #07396e;
 }
 
 /* Página de contactos */
@@ -483,11 +349,6 @@ a:hover {
 .feedback-btn:hover {
     background-color: #07396e;
     color:white;
-}
-
-.text-muted {
-    font-size: 1rem;
-    color: #6c757d;
 }
 
 /* Responsividade */
