@@ -22,12 +22,12 @@
         ]);
 
         if ($result) {
-            echo "A sua reserva foi concluída com sucesso";
-            echo '<br><button onclick="window.location.href=\'index.php\'">Voltar para a Página Inicial</button>';
+            echo "Your reservation has been successfully completed!";
+            echo '<br><button onclick="window.location.href=\'index.php\'">Return to the Home Page</button>';
             exit;
         } else {
-            echo "Erro na reserva. Por favor tente novamente mais tarde.";
-            echo '<br><button onclick="window.location.href=\'reservas.html\'">Voltar para a Página de Reservas</button>';
+            echo "Reservation error. Please try again later.";
+            echo '<br><button onclick="window.location.href=\'reservas.html\'">Return to the Reservation Page</button>';
             exit;
         }
     }
