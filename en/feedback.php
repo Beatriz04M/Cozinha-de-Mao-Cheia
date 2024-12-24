@@ -1,11 +1,11 @@
 <?php
-require('includes/connection.php');
+    require('includes/connection.php');
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome'], $_POST['email'], $_POST['mensagem'], $_POST['nota'])) {
-            $nome = trim($_POST['nome']);
-            $email = trim($_POST['email']);
-            $mensagem = trim($_POST['mensagem']);
-            $nota = trim($_POST['nota']);
+        $nome = trim($_POST['nome']);
+        $email = trim($_POST['email']);
+        $mensagem = trim($_POST['mensagem']);
+        $nota = trim($_POST['nota']);
 
         if (!empty($mensagem)) {
             $sql = 'INSERT INTO feedback (nome, email, mensagem, nota) VALUES (:nome, :email, :mensagem, :nota)';
@@ -15,9 +15,13 @@ require('includes/connection.php');
             $stmt->bindValue(':mensagem', $mensagem, PDO::PARAM_STR);  
             $stmt->bindValue(':nota', $nota, PDO::PARAM_INT); 
             $stmt->execute();
-           echo "Obrigado pelo seu feedback!";
-            } else 
-                echo "Erro na submissão do feedback. Por favor tente novamente mais tarde.";
-            exit;    
-        }
+            echo "Thank you for your feedback!";
+            echo '<br><button onclick="window.location.href=\'index.php\'">Return to the Contact Page</button>';
+            exit;
+        } else {
+            echo "Feedback submission error. Please try again later.";
+            echo '<br><button onclick="window.location.href=\'contactos.html\'">Return to the Contact Page</button>';
+            exit;
+        } 
+    }       
 ?>
