@@ -1,25 +1,22 @@
+<?php require('includes/connection.php') ?>
 <?php
-// Função para obter o menu do dia
-function getMenuDoDia($dbh) {
-    // Array com os dias da semana
-    $diasSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
-    
-    // Obter o dia da semana atual
-    $hoje = new DateTime();
-    $diaSemana = $diasSemana[$hoje->format('w')];
+    // Função para obter o menu do dia
+    function getMenuDoDia($dbh) {
+        $diasSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+        
+        $hoje = new DateTime();
+        $diaSemana = $diasSemana[$hoje->format('w')];
 
-    // Consultar o menu do dia no banco de dados
-    $stmt = $dbh->prepare("SELECT sopa, peixe, carne, info, imagem, dia_semana FROM menu WHERE dia_semana = :dia_semana");
-    $stmt->execute([":dia_semana" => $diaSemana]);
-    $menu = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt = $dbh->prepare("SELECT sopa, peixe, carne, info, imagem, dia_semana FROM menu WHERE dia_semana = :dia_semana");
+        $stmt->execute([":dia_semana" => $diaSemana]);
+        $menu = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    // Verificar se há menu para o dia
-    if ($menu) {
-        return $menu;
-    } else {
-        return ["error" => "Menu não disponível para hoje."];
+        if ($menu) {
+            return $menu;
+        } else {
+            return ["error" => "Menu não disponível para hoje."];
+        }
     }
-}
 ?>
 <!DOCTYPE html>
 <html lang="pt">
@@ -30,13 +27,11 @@ function getMenuDoDia($dbh) {
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="imagens/Logo_1.png" type="">
 </head>
 <body>
-
-    <?php require('includes/connection.php') ?>
-    <?php require('reservar.php') ?>
      <!-- Header -->
-     <header >
+    <header >
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.php">
@@ -60,14 +55,14 @@ function getMenuDoDia($dbh) {
                             <a class="nav-link" href="reservas.html">Reservas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contactos.php">Contactos</a>
+                            <a class="nav-link" href="contactos.html">Contactos</a>
                         </li>
                     </ul>
                     <!-- Opção de Idioma -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link-i active" aria-current="page" href="index.php">pt |</a>
-                            <a class="nav-link-i" href="index.php">en</a>
+                            <a class="nav-link-i" href="en/index.php">en</a>
                         </li>
                     </ul>
                 </div>
@@ -80,39 +75,39 @@ function getMenuDoDia($dbh) {
                 <p>A qualidade é a nossa marca</p>
             </div>
         </div>
-    
-   </header>
+    </header>
 
-   <!--Conteúdo-->
-   <div id="Menu">
-    <h2 class="text-center">Menu do dia</h2>
-    <p class="text-center">Confira os pratos especiais que temos hoje para si!</p>
-    <br>
-    <div class="row justify-content-center">
-            <div class="col-md-5">
+    <!--Conteúdo-->
+    <div id="Menu">
+        <h2 class="text-center">Menu do dia</h2>
+        <p class="text-center">Confira os pratos especiais que temos hoje para si!</p>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
                 <div class="card">
                     <?php
-                    // Obter o menu do dia
-                    $menu = getMenuDoDia($dbh);
-                    if (isset($menu['error'])): 
+                        // Obter o menu do dia
+                        $menu = getMenuDoDia($dbh);
+                        if (isset($menu['error'])): 
                     ?>
-                        <tr>
-                            <td colspan="4"><?= htmlspecialchars($menu['error']) ?></td>
-                        </tr>
+                    <tr>
+                        <td colspan="4"><?= htmlspecialchars($menu['error']) ?></td>
+                    </tr>
                     <?php else: ?>
                     <div class="card-header text-center"><?= htmlspecialchars($menu['dia_semana']) ?></div>
-                    <div class="card-body d-flex">
+                        <div class="card-body d-flex">
                             <div class="menu-text mx-4">
-                            <p><strong>Sopa: </strong><?= htmlspecialchars($menu['sopa']) ?></p>
-                            <p><strong>Peixe: </strong><?= htmlspecialchars($menu['peixe']) ?></p>
-                            <p><strong>Carne: </strong><?= htmlspecialchars($menu['carne']) ?></p>
-                            <p><?= htmlspecialchars($menu['info']) ?></p>
-                         </div>
-                        <img class="menu-image" src="imagens/<?= htmlspecialchars($menu['imagem']) ?>" alt="Imagem do Menu" style="width: 150px; max-height: 120px;">
-                        <?php endif; ?>
+                                <p><strong>Sopa: </strong><?= htmlspecialchars($menu['sopa']) ?></p>
+                                <p><strong>Peixe: </strong><?= htmlspecialchars($menu['peixe']) ?></p>
+                                <p><strong>Carne: </strong><?= htmlspecialchars($menu['carne']) ?></p>
+                                <p><?= htmlspecialchars($menu['info']) ?></p>
+                            </div>
+                            <img class="menu-image" src="imagens/<?= htmlspecialchars($menu['imagem']) ?>" alt="Imagem do Menu" style="width: 150px; max-height: 120px;">
+                            <?php endif; ?>
+                        </div>
                     </div>
-                </div>
-            </div> 
+                </div> 
+            </div>
         </div>
     </div>
 
@@ -188,80 +183,81 @@ function getMenuDoDia($dbh) {
         <!-- Carrossel -->
         <div id="carouselExampleIndicators" class="carousel slide" style="width: 100%; max-width: 1200px; margin: auto;">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
             </div>
-            <div class="carousel-inner" style="margin-top: 20px;">
-              <div class="carousel-item active">
-                <img src="imagens/carrossel1_1.jpg" class="d-block w-100" alt="Entrada1">
-              </div>
-              <div class="carousel-item">
-                <img src="imagens/carrossel2_1.JPG" class="d-block w-100" alt="Fruta1">
-              </div>
-              <div class="carousel-item">
-                <img src="imagens/carrossel3_1.JPG" class="d-block w-100" alt="Entrada2">
-              </div>
-              <div class="carousel-item">
-                <img src="imagens/carrossel4.JPG" class="d-block w-100" alt="Fruta2">
-              </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="imagens/carrossel1_1.jpg" class="d-block w-100" alt="Entrada1">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagens/carrossel2_1.JPG" class="d-block w-100" alt="Fruta1">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagens/carrossel3_1.JPG" class="d-block w-100" alt="Entrada2">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagens/carrossel4.JPG" class="d-block w-100" alt="Fruta2">
+                </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Próximo</span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Anterior</span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
             </button>
-          </div>
-          <br>
+        </div>
+        <br>
         <p class="text-center mb-3">Reserve já a sua mesa de forma rápida e fácil!</p>
+    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="reservationModalLabel">Reserva - Cozinha de Mão Cheia</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reservationModalLabel">Reserva - Cozinha de Mão Cheia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="reservationForm" action="reservar.php" method="POST">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="num_tele" class="form-label">Número de telemóvel</label>
+                            <input type="tel" class="form-control" id="num_tele" name="num_tele" placeholder="Número de telemóvel" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="data_hora" class="form-label">Data e Hora</label>
+                            <input type="text" class="form-control" id="data_hora" name="data_hora" placeholder="Data e Hora" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="num_pessoas" class="form-label">Número de Pessoas</label>
+                            <input type="text" class="form-control" id="num_pessoas" name="num_pessoas" placeholder="Número de Pessoas" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pedidos" class="form-label">Pedidos Especiais</label>
+                            <textarea class="form-control" id="pedidos" name="pedidos" placeholder="Insira aqui o seu pedido" rows="3"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-success">Confirmar Reserva</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            <form id="reservationForm" action="reservar.php" method="POST">
-            <div class="mb-3">
-                <label for="name" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Nome" required>
-            </div>
-            <div class="mb-3">
-                <label for="phone" class="form-label">Número de telemóvel</label>
-                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Número de telemóvel" required>
-            </div>
-            <div class="mb-3">
-                <label for="date" class="form-label">Data e Hora</label>
-                <input type="text" class="form-control" id="date" name="date_time" placeholder="Data e Hora" required>
-            </div>
-            <div class="mb-3">
-                <label for="guests" class="form-label">Número de Pessoas</label>
-                <input type="text" class="form-control" id="guests" name="guests" placeholder="Número de Pessoas" required>
-            </div>
-            <div class="mb-3">
-                <label for="specialRequests" class="form-label">Pedidos Especiais</label>
-                <textarea class="form-control" id="specialRequests" name="specialRequests" placeholder="Digite aqui suas preferências..." rows="3"></textarea>
-            </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-success">Confirmar Reserva</button>
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-            </div>
-            </form>
-        </div>
-        </div>
-    </div>
     </div>
 
     <!-- Trigger Button -->
     <div class="center-button">
-    <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#reservationModal">Fazer Reserva</button>
+        <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#reservationModal">Fazer Reserva</button>
     </div>
         
     <!-- Footer -->
@@ -272,7 +268,11 @@ function getMenuDoDia($dbh) {
                 <div class="col-md-5 ms-md-3"> 
                     <h5 class="fw-bold">Contactos</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i>961 062 031</li>
+                    <li class="mb-2">
+                        <a href="961062047" class="nav-link p-0">
+                            <i class="bi bi-telephone-fill me-2"></i>961 062 031
+                        </a>
+                    </li>
                         <li class="mb-2">
                             <a href="mailto:cozinhademaocheia.restaurante@gmail.com" class="nav-link p-0">
                                 <i class="bi bi-envelope-fill me-2"></i>cozinhademaocheia.restaurante@gmail.com
@@ -314,11 +314,11 @@ function getMenuDoDia($dbh) {
             </div>
         </div>
     </footer>
-                <script>
-                    function openServiços(){
-                        window.location.href = "servicos.html";
-                    }
-                </script>
-                <script src="js/bootstrap.bundle.min.js" ></script>
+    <script>
+        function openServiços(){
+            window.location.href = "servicos.html";
+        }
+    </script>
+    <script src="js/bootstrap.bundle.min.js" ></script>
 </body>
 </html>

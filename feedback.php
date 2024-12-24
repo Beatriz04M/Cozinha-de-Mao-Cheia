@@ -1,39 +1,27 @@
 <?php
-// Conexão com o banco de dados
-require('includes/connection.php');
+    require('includes/connection.php');
 
-    // Verificar se o formulário foi submetido via POST
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Verificar se os campos necessários estão definidos
-        if (isset($_POST['name'], $_POST['email'], $_POST['message'], $_POST['rating'])) {
-            // Capturar os dados do formulário
-            $name = $_POST['name'];
-            $email = $_POST['email'];
-            $message = $_POST['message'];
-            $rating = $_POST['rating'];
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome'], $_POST['email'], $_POST['mensagem'], $_POST['nota'])) {
+        $nome = trim($_POST['nome']);
+        $email = trim($_POST['email']);
+        $mensagem = trim($_POST['mensagem']);
+        $nota = trim($_POST['nota']);
 
-            // Preparar a query para inserir os dados na tabela feedback
-            $stmt = $dbh->prepare("INSERT INTO feedback (nome, email, mensagem, nota) 
-                                VALUES (:name, :email, :message, :rating)");
-
-            // Executar a query com os dados do formulário
-            $result = $stmt->execute([
-                ':name' => $name,
-                ':email' => $email,
-                ':message' => $message,
-                ':rating' => $rating
-            ]);
-
-            // Verificar se a inserção foi bem-sucedida
-            if ($result) {
-                $_SESSION['message'] = "Feedback enviado com sucesso!";
-                header('Location: contactos.php'); // Redirecionar para uma página de agradecimento ou outra
-                exit;
-            } else {
-                $_SESSION['error'] = "Erro ao enviar o feedback. Tente novamente!";
-                header('Location: contactos.php'); // Redirecionar de volta para o formulário
-                exit;
-        }
-    }
-}
+        if (!empty($mensagem)) {
+            $sql = 'INSERT INTO feedback (nome, email, mensagem, nota) VALUES (:nome, :email, :mensagem, :nota)';
+            $stmt = $dbh->prepare($sql);
+            $stmt->bindValue(':nome', $nome, PDO::PARAM_STR);
+            $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+            $stmt->bindValue(':mensagem', $mensagem, PDO::PARAM_STR);  
+            $stmt->bindValue(':nota', $nota, PDO::PARAM_INT); 
+            $stmt->execute();
+            echo "Obrigado pelo seu feedback!";
+            echo '<br><button onclick="window.location.href=\'index.php\'">Voltar para a Página Inicial</button>';
+            exit;
+        } else {
+            echo "Erro na submissão do feedback. Por favor tente novamente mais tarde.";
+            echo '<br><button onclick="window.location.href=\'contactos.html\'">Voltar para a Página de Contactos</button>';
+            exit;
+        } 
+    }       
 ?>

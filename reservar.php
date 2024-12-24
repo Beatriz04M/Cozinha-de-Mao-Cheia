@@ -1,38 +1,34 @@
 <?php
-// Conexão com o banco de dados
-require('includes/connection.php');
+    require('includes/connection.php');
 
-// Verificar se o formulário foi submetido
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Capturar os dados do formulário
-    $name = $_POST['name'];
-    $phone = $_POST['phone'];
-    $dateTime = $_POST['date_time'];
-    $guests = $_POST['guests'];
-    $specialRequests = $_POST['specialRequests'];
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $nome = $_POST['nome'];
+        $num_tele = $_POST['num_tele'];
+        $data_hora = $_POST['data_hora'];
+        $num_pessoas = $_POST['num_pessoas'];
+        $pedidos = $_POST['pedidos'];
 
-    // Preparar a query para inserir os dados na tabela reservas
-    $stmt = $dbh->prepare("INSERT INTO reservas (nome, num_tele, data_hora, num_pessoas, pedidos) 
-                           VALUES (:name, :phone, :date_time, :guests, :special_requests)");
+        // Preparar a query para inserir os dados na tabela reservas
+        $stmt = $dbh->prepare("INSERT INTO reservas (nome, num_tele, data_hora, num_pessoas, pedidos) 
+                                VALUES (:nome, :num_tele, :data_hora, :num_pessoas, :pedidos)");
 
-    // Executar a query com os dados do formulário
-    $result = $stmt->execute([
-        ':name' => $name,
-        ':phone' => $phone,
-        ':date_time' => $dateTime,
-        ':guests' => $guests,
-        ':special_requests' => $specialRequests
-    ]);
+        // Executar a query com os dados do formulário
+        $result = $stmt->execute([
+            ':nome' => $nome,
+            ':num_tele' => $num_tele,
+            ':data_hora' => $data_hora,
+            ':num_pessoas' => $num_pessoas,
+            ':pedidos' => $pedidos
+        ]);
 
-    // Verificar se a inserção foi bem-sucedida
-    if ($result) {
-        $_SESSION['message'] = "Reserva realizada com sucesso!";
-        header('Location: index.php'); // Redirecionar para a página principal ou onde você quiser
-        exit;
-    } else {
-        $_SESSION['error'] = "Erro ao realizar a reserva. Tente novamente!";
-        header('Location: index.php'); // Redirecionar para a página principal ou onde você quiser
-        exit;
+        if ($result) {
+            echo "A sua reserva foi concluída com sucesso";
+            echo '<br><button onclick="window.location.href=\'index.php\'">Voltar para a Página Inicial</button>';
+            exit;
+        } else {
+            echo "Erro na reserva. Por favor tente novamente mais tarde.";
+            echo '<br><button onclick="window.location.href=\'reservas.html\'">Voltar para a Página de Reservas</button>';
+            exit;
+        }
     }
-}
 ?>
