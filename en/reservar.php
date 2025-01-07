@@ -1,5 +1,5 @@
 <?php
-    require('includes/connection.php');
+    require('../includes/connection.php');
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nome = $_POST['nome'];

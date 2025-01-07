@@ -1,5 +1,5 @@
 <?php
-    require('includes/connection.php');
+    require('../includes/connection.php');
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome'], $_POST['email'], $_POST['mensagem'], $_POST['nota'])) {
         $nome = trim($_POST['nome']);

@@ -30,44 +30,9 @@
     <link rel="icon" href="imagens/Logo_1.png" type="">
 </head>
 <body>
-     <!-- Header -->
-    <header >
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.php">
-                    <img src="Imagens/Logo_1.png" alt="Logo" class="d-inline-block align-text-top">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação" onclick="escondeContainer()">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav justify-content-center nav-underline align-items-center fs-5 flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="menu.html">Menu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="servicos.html">Serviços</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="reservas.html">Reservas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contactos.html">Contactos</a>
-                        </li>
-                    </ul>
-                    <!-- Opção de Idioma -->
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link-i active" aria-current="page" href="index.php">pt |</a>
-                            <a class="nav-link-i" href="en/index.php">en</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <!-- Header -->
+    <header>
+        <?php require('includes/header_pt.php') ?>
         <div class="background-image" style="position: relative;">
             <img src="imagens/Fundo14_1.jpg" alt="Imagem Fundo">
             <div class="content">
@@ -77,7 +42,7 @@
         </div>
     </header>
 
-    <!--Conteúdo-->
+    <!--Menu-->
     <div id="Menu">
         <h2 class="text-center">Menu do dia</h2>
         <p class="text-center">Confira os pratos especiais que temos hoje para si!</p>
@@ -111,10 +76,9 @@
         </div>
     </div>
 
-    <!--Secção Serviços-->
+    <!--Serviços-->
     <div id="Serviços" class="py-5">
         <h2 class="text-center mb-4">Serviços</h2>
-        <div>
             <div class="row">
                 <!-- Take-Away -->
                 <div class="col-md-4 mb-4">
@@ -174,10 +138,9 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>    
 
-    <!-- Secção Reservas -->
+    <!-- Reservas -->
     <div id="Reservas">
         <h2 class="text-center">Faça a sua reserva</h2>
         <!-- Carrossel -->
@@ -213,107 +176,58 @@
         </div>
         <br>
         <p class="text-center mb-3">Reserve já a sua mesa de forma rápida e fácil!</p>
-    </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="reservationModalLabel">Reserva - Cozinha de Mão Cheia</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="reservationForm" action="reservar.php" method="POST">
-                        <div class="mb-3">
-                            <label for="nome" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="num_tele" class="form-label">Número de telemóvel</label>
-                            <input type="tel" class="form-control" id="num_tele" name="num_tele" placeholder="Número de telemóvel" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="data_hora" class="form-label">Data e Hora</label>
-                            <input type="text" class="form-control" id="data_hora" name="data_hora" placeholder="Data e Hora" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="num_pessoas" class="form-label">Número de Pessoas</label>
-                            <input type="text" class="form-control" id="num_pessoas" name="num_pessoas" placeholder="Número de Pessoas" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="pedidos" class="form-label">Pedidos Especiais</label>
-                            <textarea class="form-control" id="pedidos" name="pedidos" placeholder="Insira aqui o seu pedido" rows="3"></textarea>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-success">Confirmar Reserva</button>
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Trigger Button -->
-    <div class="center-button">
-        <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#reservationModal">Fazer Reserva</button>
-    </div>
-        
-    <!-- Footer -->
-    <footer class="footer-container">
-        <div class="footer text-white py-4 mx-5">
-            <div class="row justify-content-between align-items-start g-3">
-                <!-- Coluna 1: Contactos -->
-                <div class="col-md-5 ms-md-3"> 
-                    <h5 class="fw-bold">Contactos</h5>
-                    <ul class="list-unstyled">
-                    <li class="mb-2">
-                        <a href="961062047" class="nav-link p-0">
-                            <i class="bi bi-telephone-fill me-2"></i>961 062 031
-                        </a>
-                    </li>
-                        <li class="mb-2">
-                            <a href="mailto:cozinhademaocheia.restaurante@gmail.com" class="nav-link p-0">
-                                <i class="bi bi-envelope-fill me-2"></i>cozinhademaocheia.restaurante@gmail.com
-                            </a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="https://maps.app.goo.gl/gtkJ1nGs2ieNvJpq6" class="nav-link p-0">
-                                <i class="bi bi-geo-alt me-2"></i>Travessa Rua da Barqueira Nº 33 R/c, Coimbra 3045-459
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="mt-3">
-                        <strong>Segunda a Sábado:</strong><br>
-                        das 9h às 20h30
+        <!-- Modal -->
+        <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="reservationModalLabel">Reserva - Cozinha de Mão Cheia</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="reservationForm" action="reservar.php" method="POST">
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="num_tele" class="form-label">Número de telemóvel</label>
+                                <input type="tel" class="form-control" id="num_tele" name="num_tele" placeholder="Número de telemóvel" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="data_hora" class="form-label">Data e Hora</label>
+                                <input type="text" class="form-control" id="data_hora" name="data_hora" placeholder="Data e Hora" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="num_pessoas" class="form-label">Número de Pessoas</label>
+                                <input type="text" class="form-control" id="num_pessoas" name="num_pessoas" placeholder="Número de Pessoas" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="pedidos" class="form-label">Pedidos Especiais</label>
+                                <textarea class="form-control" id="pedidos" name="pedidos" placeholder="Insira aqui o seu pedido" rows="3"></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-success">Confirmar Reserva</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-
-                <!-- Coluna 2: Redes Sociais -->
-                <div class="col-md-5 me-md-3"> 
-                    <h5 class="fw-bold">Redes Sociais</h5>
-                    <ul class="list-unstyled d-flex">
-                        <li class="me-4">
-                            <a href="https://facebook.com/Cozinha-de-Mão-Cheia" style="color: white;" target="_blank">
-                                <i class="bi bi-facebook fs-3"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://instagram.com/cozinhademaocheia.restaurante" style="color: white;" target="_blank">
-                                <i class="bi bi-instagram fs-3"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Rodapé -->
-            <div class="text-center mt-4">
-                <small>© 2024 Cozinha de Mão Cheia. Todos os direitos reservados.</small>
             </div>
         </div>
+    
+        <!-- Trigger Button -->
+        <div class="center-button">
+            <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#reservationModal">Fazer Reserva</button>
+        </div>
+    </div> 
+       
+    <!-- Footer -->
+    <footer class="footer-container">
+        <?php require('includes/footer_pt.php') ?>
     </footer>
+
     <script>
         function openServiços(){
             window.location.href = "servicos.html";
