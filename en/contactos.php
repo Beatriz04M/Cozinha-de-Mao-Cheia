@@ -13,7 +13,7 @@
     <header>
         <?php require('../includes/header_en.php') ?>
         <div class="background-image" style="position: relative;">
-            <img src="imagens/Fundo12_1.jpg" alt="Imagem Fundo">
+            <img src="../imagens/Fundo12_1.jpg" alt="Imagem Fundo">
             <div class="content">
                 <h1>Contacts</h1>
                 <p>Cozinha de Mão Cheia</p>
