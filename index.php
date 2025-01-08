@@ -222,7 +222,7 @@
             <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#reservationModal">Fazer Reserva</button>
         </div>
     </div> 
-       
+
     <!-- Footer -->
     <footer class="footer-container">
         <?php require('includes/footer_pt.php') ?>
@@ -230,7 +230,7 @@
 
     <script>
         function openServiços(){
-            window.location.href = "servicos.html";
+            window.location.href = "servicos.php";
         }
     </script>
     <script src="js/bootstrap.bundle.min.js" ></script>

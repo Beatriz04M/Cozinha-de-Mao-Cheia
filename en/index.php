@@ -235,7 +235,7 @@ function getMenuDoDia($dbh) {
     
     <script>
         function openServiços(){
-            window.location.href = "servicos.html";
+            window.location.href = "servicos.php";
         }
     </script>
     <script src="../js/bootstrap.bundle.min.js" ></script>
