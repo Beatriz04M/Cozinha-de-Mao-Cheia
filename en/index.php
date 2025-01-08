@@ -72,7 +72,7 @@ function getMenuDoDia($dbh) {
                                 <p><strong>Carne: </strong><?= htmlspecialchars($menu['carne']) ?></p>
                                 <p><?= htmlspecialchars($menu['info']) ?></p>
                             </div>
-                            <img class="menu-image" src="imagens/<?= htmlspecialchars($menu['imagem']) ?>" alt="Imagem do Menu" style="width: 150px; max-height: 120px;">
+                            <img class="menu-image" src="../imagens/<?= htmlspecialchars($menu['imagem']) ?>" alt="Imagem do Menu" style="width: 150px; max-height: 120px;">
                             <?php endif; ?>
                         </div>
                     </div>
