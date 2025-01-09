@@ -29,7 +29,7 @@
             <p class="text-center" style="margin-bottom: 15px;">From December 22nd to December 28th</p>
             <div class="section-center row">
                 <div class="menu-semanal col-lg-6 col-sm-12">
-                    <img src="../imagens/Peixe3.jpg" alt="" class="menu-foto">
+                    <img src="../imagens/peixe3.jpg" alt="" class="menu-foto">
                     <div class="menu-info">
                         <div class="menu-title">
                             <h3 class="card-title">Monday</h3>
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="menu-semanal col-lg-6 col-sm-12">
-                    <img src="../imagens/carne2_1.JPG" alt="" class="menu-foto">
+                    <img src="../imagens/carne2_1.jpg" alt="" class="menu-foto">
                     <div class="menu-info">
                         <div class="menu-title">
                             <h3 class="card-title">Tuesday</h3>
@@ -57,7 +57,7 @@
                     </div>
                 </div>
                 <div class="menu-semanal col-lg-6 col-sm-12">
-                    <img src="../imagens/peixe6.JPG" alt="" class="menu-foto">
+                    <img src="../imagens/peixe6.jpg" alt="" class="menu-foto">
                     <div class="menu-info">
                         <div class="menu-title">
                             <h3 class="card-title">Wednesday</h3>
@@ -71,7 +71,7 @@
                     </div>
                 </div>
                 <div class="menu-semanal col-lg-6 col-sm-12">
-                    <img src="../imagens/carne1_1.JPG" alt="" class="menu-foto">
+                    <img src="../imagens/carne1.jpg" alt="" class="menu-foto">
                     <div class="menu-info">
                         <div class="menu-title">
                             <h3 class="card-title">Thursday</h3>
@@ -85,7 +85,7 @@
                     </div>
                 </div>
                 <div class="menu-semanal col-lg-6 col-sm-12">
-                    <img src="../imagens/Peixe2.jpg" alt="" class="menu-foto">
+                    <img src="../imagens/peixe2.jpg" alt="" class="menu-foto">
                     <div class="menu-info">
                         <div class="menu-title">
                             <h3 class="card-title">Friday</h3>
@@ -99,7 +99,7 @@
                     </div>
                 </div>
                 <div class="menu-semanal col-lg-6 col-sm-12">
-                    <img src="../imagens/carne3.JPG" alt="" class="menu-foto">
+                <img src="../imagens/carne4.JPG" alt="" class="menu-foto">
                     <div class="menu-info">
                         <div class="menu-title">
                             <h3 class="card-title">Saturday</h3>
