@@ -2,15 +2,19 @@
 <?php
     // Função para obter o menu do dia
     function getMenuDoDia($dbh) {
+        // Array com os dias da semana
         $diasSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
         
+        // Obter o dia da semana atual
         $hoje = new DateTime();
         $diaSemana = $diasSemana[$hoje->format('w')];
 
+        // Consultar o menu do dia na base de dados
         $stmt = $dbh->prepare("SELECT sopa, peixe, carne, info, imagem, dia_semana FROM menu WHERE dia_semana = :dia_semana");
         $stmt->execute([":dia_semana" => $diaSemana]);
         $menu = $stmt->fetch(PDO::FETCH_ASSOC);
 
+        // Verificar se há menu para o dia
         if ($menu) {
             return $menu;
         } else {
@@ -144,7 +148,7 @@
     <div id="Reservas">
         <h2 class="text-center">Faça a sua reserva</h2>
         <!-- Carrossel -->
-        <div id="carouselExampleIndicators" class="carousel slide" style="width: 100%; max-width: 1200px; margin: auto;">
+        <div id="carouselExampleIndicators" class="carousel slide" style="max-width: 1200px; margin: auto;">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>

@@ -1,5 +1,5 @@
 <div class="footer text-white py-4 mx-5">
-    <div class="row justify-content-between align-items-start g-3">
+    <div class="row justify-content-between align-items-start">
         <!-- Coluna 1: Contactos -->
         <div class="col-md-5 ms-md-3"> 
             <h5 class="fw-bold">Contacts</h5>
