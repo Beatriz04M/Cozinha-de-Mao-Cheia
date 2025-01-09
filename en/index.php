@@ -53,7 +53,7 @@ function getMenuDoDia($dbh) {
         <p class="text-center">Check out the special dishes we have for you today!</p>
         <br>
         <div class="row justify-content-center">
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <div class="card">
                     <?php
                     // Obter o menu do dia
@@ -72,7 +72,7 @@ function getMenuDoDia($dbh) {
                                 <p><strong>Carne: </strong><?= htmlspecialchars($menu['carne']) ?></p>
                                 <p><?= htmlspecialchars($menu['info']) ?></p>
                             </div>
-                            <img class="menu-image" src="../imagens/<?= htmlspecialchars($menu['imagem']) ?>" alt="Imagem do Menu" style="width: 150px; max-height: 120px;">
+                            <img class="menu-image" src="../imagens/<?= htmlspecialchars($menu['imagem']) ?>" alt="Imagem do Menu" style="width: 150px; max-height:120px">
                             <?php endif; ?>
                         </div>
                     </div>
@@ -149,7 +149,7 @@ function getMenuDoDia($dbh) {
     <div id="Reservas">
         <h2 class="text-center">Make your reservation</h2>
         <!-- Carrossel -->
-        <div id="carouselExampleIndicators" class="carousel slide" style="width: 100%; max-width: 1200px; margin: auto;">
+        <div id="carouselExampleIndicators" class="carousel slide" style="margin: auto;">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -182,49 +182,11 @@ function getMenuDoDia($dbh) {
         <br>
         <p class="text-center mb-3">Reserve your table quickly and easily!</p>
 
-        <!-- Modal -->
-        <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="reservationModalLabel">Reservation - Cozinha de Mão Cheia</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="reservationForm" action="reservar.php" method="POST">
-                            <div class="mb-3">
-                                <label for="nome" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Name" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="num_tele" class="form-label">Phone number</label>
-                                <input type="tel" class="form-control" id="num_tele" name="num_tele" placeholder="Phone number" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="data_hora" class="form-label">Date and Time</label>
-                                <input type="text" class="form-control" id="data_hora" name="data_hora" placeholder="Date and Time" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="num_pessoas" class="form-label">Number of people</label>
-                                <input type="text" class="form-control" id="num_pessoas" name="num_pessoas" placeholder="Number of people" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="pedidos" class="form-label">Special requests</label>
-                                <textarea class="form-control" id="pedidos" name="pedidos" placeholder="Enter your order here" rows="3"></textarea>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-success">Confirm Reservation</button>
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Trigger Button -->
         <div class="center-button">
-            <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#reservationModal">Make Reservation</button>
+            <button class="btn btn-secondary" onclick="openReservas()">
+                Make Reservation
+            </button>
         </div>
     </div> 
        
@@ -236,6 +198,9 @@ function getMenuDoDia($dbh) {
     <script>
         function openServiços(){
             window.location.href = "servicos.php";
+        }
+        function openReservas(){
+            window.location.href = "reservas.php";
         }
     </script>
     <script src="../js/bootstrap.bundle.min.js" ></script>

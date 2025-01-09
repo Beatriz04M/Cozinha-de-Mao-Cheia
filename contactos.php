@@ -45,16 +45,16 @@
             <div class="row mb-3">
                 <div class="col-md-6">
                     <label for="nome" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Insira o seu nome" required>
+                    <input type="text" class="form-control" id="nome" name="nome" required>
                 </div>
                 <div class="col-md-6">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Insira o seu email" required>
+                    <input type="email" class="form-control" id="email" name="email" required>
                 </div>
             </div>
             <div class="mb-3">
                 <label for="mensagem" class="form-label">Feedback</label>
-                <textarea class="form-control" id="mensagem" name="mensagem" rows="5" placeholder="Fale-nos da sua experiência..." required></textarea>
+                <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required></textarea>
             </div>
             <div class="mb-4">
                 <label class="form-label">Nota</label>

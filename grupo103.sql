@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09-Jan-2025 às 00:24
+-- Tempo de geração: 09-Jan-2025 às 19:42
 -- Versão do servidor: 10.4.32-MariaDB
 -- versão do PHP: 8.2.12
 
@@ -46,14 +46,11 @@ INSERT INTO `feedback` (`id`, `nome`, `email`, `mensagem`, `nota`) VALUES
 (4, 'Luís Martins', 'a2022136514@alumni.iscac.pt', 'A aposta feita no uso de produtos frescos, por parte desta casa traduz-se na qualidade e sabor de cada prato. \r\n', 5),
 (7, 'Beatriz Martins', 'beatrizvmartins04@gmail.com', 'Bom apetite!', 5),
 (34, 'Beatriz Martins', 'beatrizvmartins04@gmail.com', 'Gostei muito!', 5),
-(35, 'Beatriz Martins', 'beatrizvmartins04@gmail.com', 'Perfect!', 5),
-(36, 'Beatriz Martins', 'beatrizvmartins04@gmail.com', 'Very good!', 5),
-(37, 'Beatriz Martins', 'beatrizvmartins04@gmail.com', 'excelente', 5),
-(38, 'Beatriz Martins', 'beatrizvmartins04@gmail.com', 'excelent', 5),
-(39, 'Beatriz Martins', 'beatrizvmartins04@gmail.com', 'perfect', 5),
-(40, 'Beatriz Martins', 'a2022136514@alumni.iscac.pt', 'i loved', 5),
 (41, 'Beatriz Martins', 'a2022136514@alumni.iscac.pt', 'Muito bom!', 5),
-(42, 'Beatriz Martins', 'a2022136514@alumni.iscac.pt', 'Amazing :)', 5);
+(42, 'Beatriz Martins', 'a2022136514@alumni.iscac.pt', 'Amazing :)', 5),
+(43, 'Beatriz Martins', 'beatrizvmartins04@gmail.com', 'Gostei muito', 5),
+(44, 'Beatriz Martins', 'beatrizvmartins04@gmail.com', 'Muito bom', 5),
+(45, 'Beatriz Martins', 'beatrizvmartins04@gmail.com', 'Gostei!', 5);
 
 -- --------------------------------------------------------
 
@@ -77,12 +74,12 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`id`, `dia_semana`, `data`, `sopa`, `peixe`, `carne`, `info`, `imagem`) VALUES
-(1, 'Segunda-feira', '2024-12-23', 'Sopa de agrião', 'Perca grelhada', 'Bitoque de porco', NULL, 'Peixe3.jpg'),
-(2, 'Terça-feira', '2024-12-24', 'Sopa de feijão verde', 'Salmão grelhado', 'Bifes de vitela de cebolada', NULL, 'carne2_1.JPG'),
-(3, 'Quarta-feira', '2024-12-25', 'Sopa de couve portuguesa', 'Polvo à Lagareiro', 'Secretos de porco grelhados', NULL, 'peixe6.JPG'),
-(4, 'Quinta-feira', '2024-12-26', 'Creme de legumes', 'Raia frita com arroz de legumes', 'Picanha na grelha', NULL, 'carne1_1.JPG'),
-(5, 'Sexta-feira ', '2024-12-27', 'Caldo verde', 'Bacalhau cozido com grão', 'Espetadas mistas ', NULL, 'Peixe2.jpg'),
-(6, 'Sábado', '2024-12-28', 'Sopa de espinafres', 'Linguado grelhado', 'Cozido à Portuguesa', NULL, 'carne3.JPG'),
+(1, 'Segunda-feira', '2024-12-23', 'Sopa de agrião', 'Perca grelhada', 'Bitoque de porco', NULL, 'peixe3.jpg'),
+(2, 'Terça-feira', '2024-12-24', 'Sopa de feijão verde', 'Salmão grelhado', 'Bifes de vitela de cebolada', NULL, 'carne2_1.jpg'),
+(3, 'Quarta-feira', '2024-12-25', 'Sopa de couve portuguesa', 'Polvo à Lagareiro', 'Secretos de porco grelhados', NULL, 'peixe6.jpg'),
+(4, 'Quinta-feira', '2024-12-26', 'Creme de legumes', 'Raia frita com arroz de legumes', 'Picanha na grelha', NULL, 'carne1.jpg'),
+(5, 'Sexta-feira ', '2024-12-27', 'Caldo verde', 'Bacalhau cozido com grão', 'Espetadas mistas ', NULL, 'peixe2.jpg'),
+(6, 'Sábado', '2024-12-28', 'Sopa de espinafres', 'Linguado grelhado', 'Cozido à Portuguesa', NULL, 'carne4.jpg'),
 (7, 'Domingo', '2024-12-22', NULL, NULL, NULL, 'Descanso semanal', 'sobremesa_9.jpg');
 
 -- --------------------------------------------------------
@@ -107,19 +104,15 @@ CREATE TABLE `reservas` (
 INSERT INTO `reservas` (`id`, `nome`, `num_tele`, `data_hora`, `num_pessoas`, `pedidos`) VALUES
 (1, 'Beatriz Martins', '961062047', '20241221', 2, ''),
 (2, 'Beatriz Martins', '961062047', '20241221', 2, ''),
-(17, 'Beatriz Martins', '961062047', '22/12/2024 12:30', 2, ''),
-(27, 'Beatriz Martins', '961062047', '23/12/2024 20h', 1, ''),
-(39, 'Beatriz Martins', '961062047', '07/01/2025 15h', 1, ''),
-(40, 'Beatriz Martins', '961062047', '07/01/2025 15h', 3, ''),
-(41, 'Beatriz Martins', '961062047', '07/01/2025 15h', 2, ''),
-(42, 'Beatriz Martins', '961062047', '07/01/2025 15:30h', 1, ''),
-(43, 'Beatriz Martins', '961062047', '07/01/2025 17h', 3, ''),
 (44, 'Beatriz Martins', '961062047', '08/01/2025 15h', 1, ''),
 (45, 'Beatriz Martins', '961062047', '08/01/2025 15h', 2, ''),
 (46, 'Beatriz Martins', '961062047', '08/01/2025 14h', 1, ''),
 (47, 'Beatriz Martins', '961062047', '08/01/2025 13h', 1, ''),
 (48, 'Beatriz Martins', '961062047', '08/01/2025 15h', 2, ''),
-(49, 'Beatriz Martins', '961062047', '08/01/2025 14:15h', 1, '');
+(49, 'Beatriz Martins', '961062047', '08/01/2025 14:15h', 1, ''),
+(50, 'Beatriz Martins', '961062047', '08/01/2025 15h', 2, ''),
+(51, 'Beatriz Martins', '961062047', '08/01/2025 12h', 1, ''),
+(52, 'Beatriz Martins', '961062047', '09/01/2025 15h', 1, '');
 
 --
 -- Índices para tabelas despejadas
@@ -151,7 +144,7 @@ ALTER TABLE `reservas`
 -- AUTO_INCREMENT de tabela `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT de tabela `menu`
@@ -163,7 +156,7 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT de tabela `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

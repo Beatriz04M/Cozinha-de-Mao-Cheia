@@ -52,7 +52,7 @@
         <p class="text-center">Confira os pratos especiais que temos hoje para si!</p>
         <br>
         <div class="row justify-content-center">
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <div class="card">
                     <?php
                         // Obter o menu do dia
@@ -148,7 +148,7 @@
     <div id="Reservas">
         <h2 class="text-center">Faça a sua reserva</h2>
         <!-- Carrossel -->
-        <div id="carouselExampleIndicators" class="carousel slide" style="max-width: 1200px; margin: auto;">
+        <div id="carouselExampleIndicators" class="carousel slide" style="margin: auto;">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -181,49 +181,11 @@
         <br>
         <p class="text-center mb-3">Reserve já a sua mesa de forma rápida e fácil!</p>
 
-        <!-- Modal -->
-        <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="reservationModalLabel">Reserva - Cozinha de Mão Cheia</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="reservationForm" action="reservar.php" method="POST">
-                            <div class="mb-3">
-                                <label for="nome" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="num_tele" class="form-label">Número de telemóvel</label>
-                                <input type="tel" class="form-control" id="num_tele" name="num_tele" placeholder="Número de telemóvel" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="data_hora" class="form-label">Data e Hora</label>
-                                <input type="text" class="form-control" id="data_hora" name="data_hora" placeholder="Data e Hora" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="num_pessoas" class="form-label">Número de Pessoas</label>
-                                <input type="text" class="form-control" id="num_pessoas" name="num_pessoas" placeholder="Número de Pessoas" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="pedidos" class="form-label">Pedidos Especiais</label>
-                                <textarea class="form-control" id="pedidos" name="pedidos" placeholder="Insira aqui o seu pedido" rows="3"></textarea>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-success">Confirmar Reserva</button>
-                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
         <!-- Trigger Button -->
         <div class="center-button">
-            <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#reservationModal">Fazer Reserva</button>
+            <button class="btn btn-secondary" onclick="openReservas()">
+                Fazer Reserva
+            </button>
         </div>
     </div> 
 
@@ -235,6 +197,10 @@
     <script>
         function openServiços(){
             window.location.href = "servicos.php";
+        }
+
+        function openReservas(){
+            window.location.href = "reservas.php";
         }
     </script>
     <script src="js/bootstrap.bundle.min.js" ></script>

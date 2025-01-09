@@ -5,14 +5,10 @@
             <h5 class="fw-bold">Contactos</h5>
             <ul class="list-unstyled">
                 <li class="mb-2">
-                    <a href="961062047" class="nav-link p-0">
                         <i class="bi bi-telephone-fill me-2"></i>961 062 031
-                    </a>
                 </li>
                 <li class="mb-2">
-                    <a href="mailto:cozinhademaocheia.restaurante@gmail.com" class="nav-link p-0">
                         <i class="bi bi-envelope-fill me-2"></i>cozinhademaocheia.restaurante@gmail.com
-                    </a>
                 </li>
                 <li class="mb-2">
                     <a href="https://maps.app.goo.gl/gtkJ1nGs2ieNvJpq6" class="nav-link p-0">

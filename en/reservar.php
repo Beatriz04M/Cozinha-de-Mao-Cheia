@@ -23,11 +23,11 @@
 
         if ($result) {
             echo "Your reservation has been successfully completed!";
-            echo '<br><button onclick="window.location.href=\'index.php\'">Return to the Home Page</button>';
+            echo '<br><button onclick="window.location.href=\'reservas.php\'">Return to the Reservation Page</button>';
             exit;
         } else {
             echo "Reservation error. Please try again later.";
-            echo '<br><button onclick="window.location.href=\'reservas.html\'">Return to the Reservation Page</button>';
+            echo '<br><button onclick="window.location.href=\'reservas.php\'">Return to the Reservation Page</button>';
             exit;
         }
     }

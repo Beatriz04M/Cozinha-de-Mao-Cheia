@@ -16,11 +16,11 @@
             $stmt->bindValue(':nota', $nota, PDO::PARAM_INT); 
             $stmt->execute();
             echo "Thank you for your feedback!";
-            echo '<br><button onclick="window.location.href=\'index.php\'">Return to the Home Page</button>';
+            echo '<br><button onclick="window.location.href=\'contactos.php\'">Return to the Contact Page</button>';
             exit;
         } else {
             echo "Feedback submission error. Please try again later.";
-            echo '<br><button onclick="window.location.href=\'contactos.html\'">Return to the Contact Page</button>';
+            echo '<br><button onclick="window.location.href=\'contactos.php\'">Return to the Contact Page</button>';
             exit;
         } 
     }       

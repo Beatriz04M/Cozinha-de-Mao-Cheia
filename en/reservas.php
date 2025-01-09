@@ -33,11 +33,11 @@
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="nome" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Name" required>
+                            <input type="text" class="form-control" id="nome" name="nome" required>
                         </div>
                         <div class="col-md-6">
                             <label for="num_tele" class="form-label">Phone number</label>
-                            <input type="tel" class="form-control" id="num_tele" name="num_tele" placeholder="Phone number" required>
+                            <input type="tel" class="form-control" id="num_tele" name="num_tele" required>
                         </div>
                     </div>
                                 
@@ -45,18 +45,18 @@
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="data_hora" class="form-label">Date and Time</label>
-                            <input type="text" class="form-control" id="data_hora" name="data_hora" placeholder="Date and Time" required>
+                            <input type="text" class="form-control" id="data_hora" name="data_hora" required>
                         </div>
                         <div class="col-md-6">
                             <label for="num_pessoas" class="form-label">Number of people</label>
-                            <input type="text" class="form-control" id="num_pessoas" name="num_pessoas" placeholder="Number of people" required>
+                            <input type="text" class="form-control" id="num_pessoas" name="num_pessoas" required>
                         </div>
                     </div>
                                 
                     <!-- Pedidos Especiais -->
                     <div class="mb-3">
                         <label for="pedidos" class="form-label">Special requests</label>
-                        <textarea class="form-control" id="pedidos" name="pedidos" placeholder="Enter your order here" rows="3"></textarea>
+                        <textarea class="form-control" id="pedidos" name="pedidos" rows="3"></textarea>
                     </div>
 
                     <div class="text-center">
@@ -73,8 +73,7 @@
             <p class="text-center mb-4">Enjoy the unmistakable flavor and quality that sets us apart, all in the comfort of your home.
                 <br>And because special moments deserve a unique touch, we offer personalized services to make each occasion truly unforgettable.
             <p class="text-center">
-                <strong>Contact us:</strong><br>
-                <a href="961062047"><i class="bi bi-telephone-fill"> 961062031</i></a>
+                <strong>Contact us</strong><br>
             </p>
         </div>
     </div>
